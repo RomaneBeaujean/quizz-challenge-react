@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Patrick+Hand&display=swap');
+
+body {
+    background-color: #D4EBEC;
+}
+
+.container{
+    background-color: white;
+    text-align: center;
+    width: 70vw;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.title {
+    font-family: 'Lobster', cursive;
+    font-size: 40px;
+    text-align: left;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #0B4A4D;
+    color: white;
+}
+
+.presentation {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 30px;
+    margin: 100px;
+}
+
+#start-Btn {
+    width: 30vw;
+    padding: 10px;
+    margin: 15px auto;
+    border-radius: 10px;
+    border: none;
+    font-size: 50px;
+    font-family: 'Patrick Hand', cursive;
+    background-color: #EAF3F1;
+}
+
+#start-Btn:hover{
+    background-color:#245A58;
+    color: white;
+    cursor: pointer;
+}
+
+.compteur{
+    animation-name: compteur;
+    animation-duration: 1s;
+    animation-iteration-count: 3;
+    background-color: #3A5870;
+    width: 60px;
+    color:white;
+    border-radius: 50%;
+    margin: auto;
+    padding: auto;
+    text-align: center;
+}
+
+@keyframes compteur {
+    0% {
+        transform: scale(1)
+    }
+    50% {
+        transform: scale(2)   
+    }
+    100% {
+        transform: scale(1)
+    }
+}
+
+.question {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 30px;
+}
+
+.answer {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 20px;
+    width: 60vw;
+    margin: 15px auto;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #DCE5E5;
+}
+
+.answer:hover {
+    background-color: #A8C5C5;
+    cursor: pointer;
+}
+
+.answerTargeted {
+    @extend .answer;
+    background-color: #A8C5C5;
+}
+
+@keyframes resultsAnimation {
+    0% {
+        background-color: #DFA39B;
+    }
+    50% {
+        background-color: #9BDFB3;
+    }
+    100% {
+        background-color: #DFA39B;
+    }
+}
+.resultsAnimation {
+    @extend .answerTargeted;
+    animation-name: resultsAnimation;
+    animation-duration: 300ms;
+    animation-iteration-count: 3;
+    animation-timing-function: ease-out;
+}
+
+.goodAnimation {
+    @extend .resultsAnimation;
+    background-color: #9BDFB3;
+}
+
+.falseAnimation {
+    @extend .resultsAnimation;
+    background-color: #DFA39B;
+}
+
+.next-Btn {
+    width: 10vw;
+    padding: 10px;
+    margin: 15px auto;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    font-family: 'Patrick Hand', cursive;
+    background-color: #EAF3F1;
+}
+
+.next-Btn:hover{
+    background-color:#245A58;
+    color: white;
+    cursor: pointer;
+}
+
+.results {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 50px;
+    width: 60vw;
+    margin: 15px auto;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.playAgain-Btn {
+    width: 10vw;
+    padding: 10px;
+    margin: 15px auto;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    font-family: 'Patrick Hand', cursive;
+    background-color: #EAF3F1
+}
+
+.playAgain-Btn:hover{
+    background-color:#245A58;
+    color: white;
+    cursor: pointer;
+}
