@@ -6,7 +6,6 @@ const Results = ({score, numberQuestion, handlePlayAgain}) => {
             <p>You scored {score} / {numberQuestion}</p>
             <button className="playAgain-Btn" onClick={() => handlePlayAgain()}>Play again!</button>
         </div>
-        
     )
 };
 

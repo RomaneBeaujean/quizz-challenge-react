@@ -7,8 +7,8 @@ class Presentation extends React.Component {
         this.state = {
             compteur: false,
             count: 3
-        }
-    }
+        };
+    };
 
     componentWillUnmount(){
         this.setState({

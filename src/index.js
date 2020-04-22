@@ -18,48 +18,48 @@ class App extends React.Component {
             answers:0,
             score: 0,
             animation: null,
-        }
+        };
     };
 
     handleStart = () => {
         this.setState({
             started: true
-        })
+        });
     };
 
     handleNext = () => {
-        this.handleScore()
+        this.handleScore();
         setTimeout( () => {
             this.loadNextData()
           }, 2500);
     };
 
     handleScore = () => {
-        const correctAnswer = this.state.questionsBank[this.state.currentIndex].answer
-        const answer = this.state.answerTargeted
+        const correctAnswer = this.state.questionsBank[this.state.currentIndex].answer;
+        const answer = this.state.answerTargeted;
         if (answer === correctAnswer) {
-            const score = this.state.score + 1
+            const score = this.state.score + 1;
             this.setState({
                 score: score,
                 animation: "good"
-            })
+            });
         } else {
             this.setState({
                 animation: "false"
-            })
-        }       
-    }
+            });
+        };
+    };
 
     loadNextData = () => {
-        const answers = this.state.answers + 1
+        const answers = this.state.answers + 1;
         const nextIndex = this.state.currentIndex + 1;
         this.setState({
             currentIndex : nextIndex,
             answerTargeted: null,
             answers: answers,
             animation: null,
-        })
-    }
+        });
+    };
 
     handleTargetedAnswer = (e) => {
         const answer = e;
@@ -83,7 +83,7 @@ class App extends React.Component {
 
         const answers = this.state.answers;
         const numberQuestion = this.state.questionsBank.length;
-        const started = this.state.started
+        const started = this.state.started;
 
         return (
         <div className="container">

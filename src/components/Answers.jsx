@@ -9,7 +9,7 @@ const Answers = ({answer, handleTargetedAnswer, answerTargeted, animation}) => {
             classChoice = "falseAnimation"
             ) : answer === answerTargeted ? (
                 classChoice = 'answerTargeted'
-                ) : classChoice = "answer"
+                ) : classChoice = "answer";
 
     return (
         <h4 

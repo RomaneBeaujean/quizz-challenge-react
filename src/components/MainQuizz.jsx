@@ -2,7 +2,6 @@ import React from 'react';
 import Answers from './Answers';
 
 const MainQuizz = ({question, options, handleTargetedAnswer, answerTargeted, animation}) => {
-
     return (
         <div>
             <div className="question">
